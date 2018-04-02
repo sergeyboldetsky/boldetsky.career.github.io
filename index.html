@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="fontawesome/css/fontawesome-all.css">
+    <!-- / FontAwesome -->
+    <!-- Slick slider -->
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <!-- / Slick slider -->
+    <title>Богдановский карьер</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_slider">
+            <div>
+                <img src="img/logo-bg1.jpg" alt="Экскаватор загружает авто" class="header_slider--image">
+            </div> 
+            <div>
+                <img src="img/logo-bg2.jpg" alt="Урал с камнями" class="header_slider--image">
+            </div>
+        </div>
+        <div class="header_nav">
+            <div class="header_navigation">
+                <div class="header_navigation--logo">
+                    <span>
+                        Богдановский 
+                        <i>
+                            карьер
+                        </i>
+                    </span>
+                </div>
+                <div class="header_navigation_link">
+                    <div class="header_navigation_link--btn" id="menu">
+                        <a href="#production" class="production_link">
+                            Производство
+                        </a>
+                        <div class="link-figure">
+                        </div>
+                        <a href="#adress" class="production_link">
+                            Адрес карьера
+                        </a>
+                    </div>
+                    <div class="header_navigation_link--callbtn">
+                        <a class="btn-call" href="#dialog" id="modal">
+                            Заказать звонок
+                        </a>
+                        <div id="boxes">  
+                            <div id="dialog" class="window"> 
+                                ТЕСТ
+                                <a href="#" class="close">
+                                    Закрыть
+                                </a>
+                            </div>
+                            <div id="mask"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="wrapper_min">
+            <div class="wrapper_min_text">
+                <div class="wrapper_min_text--position">
+                    <h1 id="production">
+                        Производим и продаем щебень
+                    </h1>
+                    <div class="yellow-line"></div>
+                    <p>
+                        Площадь участка 96,1 га. Щебень и гравий из плотных пород для строительных работ. 
+                        Прочность соответствует марке 800 (ДР-12). Запасы по гравию 28 %. Пески и пески-отсевы 
+                        Богдановского-2 участка могут быть использованы в качестве строительного и дорожного материала. 
+                        Мощность толщи 12-22,1 метра. Уровень грунтовых вод расположен ниже подошвы полезной толщи. 
+                        Концентрация радионуклидов соответствует 1 классу СП 2.6.1.758-99. 
+                    </p>
+                    <p>
+                        <b>Щебень 20×40</b> 
+                        пригоден в производстве бетона и изготовлении конструкций из него, для дорожного 
+                        строительства при закладке фундамента зданий, при возведении производственных всех видов 
+                        сооружений и др.
+                    </p>
+                </div>
+                <div class="wrapper_min_text--adress">
+                    <h1 id="adress">
+                        Адрес карьера
+                    </h1>
+                    <div class="yellow-line"></div>
+                    <p>
+                        <i class="fas fa-map-marker-alt yellow-marker fa-2x">
+                        </i>
+                        поселок Ханино, Суворовский район, Тульская область, Россия
+                    </p>   
+                </div>
+            </div>
+            <div class="wrapper_min_contact">
+                <div class="wrapper_min_contact_big">
+                    <div class="wrapper_min_contact_big--text">
+                        <h3>
+                            контакты
+                        </h3>
+                        <span>
+                            <strong>
+                                Звоните:
+                            </strong>
+                        </span>
+                        <span>8 (800) 
+                            <b>555-93-99</b>
+                        </span>
+                        <span>8 (495) 
+                            <b>638-55-85</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div id="map"></div>
+        <p>© 2015, Copyright</p>
+    </footer>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- / Jquery -->
+
+    <!-- Slick slider -->
+    <script src="slick/slick.js"></script>
+    <script>
+        $('.header_slider').slick({
+            infinite: true,
+            speed: 500,
+            fade: true,
+            arrows: true,
+            cssEase: 'linear'
+        });
+    </script>
+    <!-- / Slick slider -->
+
+    <!-- Google Maps API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARQpi6nb7yl_SrtieXZAJYoc8uwwudDUI&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            var uluru = {lat: 54.210607, lng: 36.615788};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: uluru,
+                mapTypeId: 'terrain',
+                disableDefaultUI: true
+            });
+            var iconBase = 'img/';
+            var icons = {
+                parking: {
+                    icon: iconBase + '1.png'
+                },
+                };
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map,
+                animation: google.maps.Animation.DROP,
+                icon: iconBase + '1.png',
+                position: {lat: 54.210607, lng: 36.615788}
+            });
+        }
+    </script>
+    <!-- / Google Maps API -->
+
+    <!-- Плавный скролл -->
+    <script>
+        $(document).ready(function(){
+            $("#menu").on("click","a", function (event) {
+                event.preventDefault();
+                var id  = $(this).attr('href'),
+                    top = $(id).offset().top;
+                $('body,html').animate({scrollTop: top}, 1000);
+            });
+        });
+    </script>
+    <!-- / Плавный скролл -->
+
+    <!-- Модальное окно -->
+    <script>
+        $(document).ready(function() {   
+            $('a[id=modal]').click(function(e) {
+            e.preventDefault();
+            var id = $(this).attr('href');
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+
+            $('#mask').css({'width':maskWidth,'height':maskHeight});
+            $('#mask').fadeIn(1000); 
+            $('#mask').fadeTo("slow",0.8); 
+
+            var winH = $(window).height();
+            var winW = $(window).width();
+        
+            $(id).css('top',  winH/2-$(id).height()/2);
+                $(id).css('left', winW/2-$(id).width()/2);
+                $(id).fadeIn(2000); 
+            });
+        
+            $('.window .close').click(function (e) {
+                e.preventDefault();
+                    $('#mask, .window').hide();
+                }); 
+        
+            $('#mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+            }); 
+        });  
+    </script>
+    <!-- / Модальное окно -->
+</body>
+</html>

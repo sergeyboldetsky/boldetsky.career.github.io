@@ -1,0 +1,490 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:700&subset=cyrillic");
+/* line 5, F:/exsy/scss/style.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* line 11, F:/exsy/scss/style.scss */
+.header {
+  position: relative;
+}
+
+/* line 14, F:/exsy/scss/style.scss */
+.header_slider {
+  overflow: hidden;
+}
+
+/* line 17, F:/exsy/scss/style.scss */
+.header_slider .slick-prev {
+  z-index: 3;
+  width: 200px;
+  height: 200px;
+  border: 100px solid transparent;
+  border-left: 100px solid white;
+}
+
+/* line 24, F:/exsy/scss/style.scss */
+.header_slider .slick-prev:before {
+  z-index: 1;
+  content: url("../img/prev.png");
+  position: relative;
+  top: -15px;
+  left: -55px;
+}
+
+/* line 32, F:/exsy/scss/style.scss */
+.header_slider .slick-prev:hover:before {
+  content: url("../img/prev-e.png");
+}
+
+/* line 36, F:/exsy/scss/style.scss */
+.header_slider .slick-prev:focus:before {
+  content: url("../img/prev-e.png");
+}
+
+/* line 41, F:/exsy/scss/style.scss */
+.header_slider .slick-next {
+  width: 200px;
+  height: 200px;
+  border: 100px solid transparent;
+  border-right: 100px solid white;
+}
+
+/* line 47, F:/exsy/scss/style.scss */
+.header_slider .slick-next:before {
+  content: url("../img/next.png");
+  position: relative;
+  top: -15px;
+  right: -15px;
+}
+
+/* line 54, F:/exsy/scss/style.scss */
+.header_slider .slick-next:hover:before {
+  width: 200px;
+  height: 200px;
+  border: 100px solid transparent;
+  border-right: 100px solid white;
+  background-image: url("../img/next-e.png");
+  background-position: 100% 120%;
+  background-repeat: no-repeat;
+}
+
+/* line 64, F:/exsy/scss/style.scss */
+.header_slider .slick-next:focus:before {
+  width: 200px;
+  height: 200px;
+  border: 100px solid transparent;
+  border-right: 100px solid white;
+  background-image: url("../img/next-e.png");
+  background-position: 100% 120%;
+  background-repeat: no-repeat;
+}
+
+/* line 75, F:/exsy/scss/style.scss */
+.header_slider--image {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* line 81, F:/exsy/scss/style.scss */
+.header_nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 87, F:/exsy/scss/style.scss */
+.header_nav .header_navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 36px;
+  max-width: 1199px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* line 96, F:/exsy/scss/style.scss */
+.header_nav .header_navigation--logo {
+  max-width: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* line 102, F:/exsy/scss/style.scss */
+.header_nav .header_navigation--logo span {
+  color: #ffffff;
+  text-shadow: 0px 1px 3.15px black;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  line-height: 36px;
+  display: block;
+  font-weight: 400;
+}
+
+/* line 111, F:/exsy/scss/style.scss */
+.header_nav .header_navigation--logo span i {
+  color: #ffea00;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+/* line 125, F:/exsy/scss/style.scss */
+.header_nav .header_navigation_link--btn {
+  max-width: 515px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 130, F:/exsy/scss/style.scss */
+.header_nav .header_navigation_link--btn .link-figure::after {
+  content: '';
+  width: 1px;
+  height: 32px;
+  display: inline-block;
+  margin: 0 20px 0 20px;
+  background-color: #ffffff;
+}
+
+/* line 139, F:/exsy/scss/style.scss */
+.header_nav .header_navigation_link--btn a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 32px;
+  color: #001111;
+}
+
+/* line 147, F:/exsy/scss/style.scss */
+.header_nav .header_navigation_link--btn a:hover {
+  color: #ffea00;
+}
+
+/* line 152, F:/exsy/scss/style.scss */
+.header_nav .header_navigation_link--callbtn {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 32px;
+}
+
+/* line 157, F:/exsy/scss/style.scss */
+.header_nav .header_navigation_link--callbtn .btn-call {
+  border-radius: 23px;
+  border: 0;
+  padding: 14px 50px;
+  color: #f9bf3a;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* line 175, F:/exsy/scss/style.scss */
+.wrapper {
+  position: relative;
+}
+
+/* line 178, F:/exsy/scss/style.scss */
+.wrapper_min {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1199px;
+  flex-wrap: wrap;
+}
+
+/* line 185, F:/exsy/scss/style.scss */
+.wrapper_min_text {
+  max-width: 833px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 190, F:/exsy/scss/style.scss */
+.wrapper_min_text--position {
+  max-width: 833px;
+  padding-top: 96px;
+  margin-right: 5%;
+  position: relative;
+}
+
+/* line 196, F:/exsy/scss/style.scss */
+.wrapper_min_text--position h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 52px;
+  text-transform: uppercase;
+}
+
+/* line 203, F:/exsy/scss/style.scss */
+.wrapper_min_text--position p {
+  text-align: justify;
+  padding-top: 88px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #222222;
+}
+
+/* line 212, F:/exsy/scss/style.scss */
+.wrapper_min_text--position p:last-child {
+  padding-top: 45px;
+}
+
+/* line 216, F:/exsy/scss/style.scss */
+.wrapper_min_text--position .yellow-line {
+  position: absolute;
+  height: 4px;
+  background-color: #ffea00;
+  right: 200px;
+  width: 10000000px;
+  margin-top: 27px;
+}
+
+/* line 226, F:/exsy/scss/style.scss */
+.wrapper_min_text--adress {
+  max-width: 833px;
+  padding-top: 96px;
+  position: relative;
+}
+
+/* line 231, F:/exsy/scss/style.scss */
+.wrapper_min_text--adress h1 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 52px;
+  text-transform: uppercase;
+}
+
+/* line 238, F:/exsy/scss/style.scss */
+.wrapper_min_text--adress p {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #222222;
+  padding-bottom: 50px;
+  margin-top: 74px;
+}
+
+/* line 248, F:/exsy/scss/style.scss */
+.wrapper_min_text--adress .yellow-line {
+  position: absolute;
+  height: 4px;
+  background-color: #ffea00;
+  right: 485px;
+  width: 10000000px;
+  margin-top: 27px;
+}
+
+/* line 257, F:/exsy/scss/style.scss */
+.wrapper_min_text--adress .yellow-marker {
+  color: #ffea00;
+}
+
+/* line 263, F:/exsy/scss/style.scss */
+.wrapper_min_contact {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+}
+
+/* line 269, F:/exsy/scss/style.scss */
+.wrapper_min_contact_big {
+  background-color: #f5f5f5;
+  padding-top: 96px;
+  max-height: 340px;
+  padding-bottom: 110px;
+}
+
+/* line 275, F:/exsy/scss/style.scss */
+.wrapper_min_contact_big--text {
+  width: 160px;
+  padding-left: 29px;
+}
+
+/* line 279, F:/exsy/scss/style.scss */
+.wrapper_min_contact_big--text h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 52px;
+}
+
+/* line 286, F:/exsy/scss/style.scss */
+.wrapper_min_contact_big--text span {
+  display: block;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+/* line 297, F:/exsy/scss/style.scss */
+.footer {
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/* line 304, F:/exsy/scss/style.scss */
+.footer #map {
+  height: 431px;
+  width: 100%;
+}
+
+/* line 309, F:/exsy/scss/style.scss */
+.footer p {
+  margin-top: 35px;
+  padding-bottom: 28px;
+}
+
+/* Стили модального окна */
+/* line 318, F:/exsy/scss/style.scss */
+#mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9000;
+  background-color: #000;
+  display: none;
+}
+
+/* line 329, F:/exsy/scss/style.scss */
+#boxes .window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 440px;
+  height: 200px;
+  display: none;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* line 340, F:/exsy/scss/style.scss */
+#boxes #dialog {
+  width: 300px;
+  height: 203px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+/* Импорт медиа запросов */
+@media screen and (max-width: 1399px) {
+  /* line 2, F:/exsy/scss/_media.scss */
+  .header_navigation {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 7, F:/exsy/scss/_media.scss */
+  .wrapper_min_text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  /* line 12, F:/exsy/scss/_media.scss */
+  .wrapper_min_contact {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* line 17, F:/exsy/scss/_media.scss */
+  .wrapper_min_contact_big {
+    text-align: center;
+  }
+  /* line 20, F:/exsy/scss/_media.scss */
+  .wrapper_min_contact_big--text {
+    width: 100%;
+  }
+  /* line 26, F:/exsy/scss/_media.scss */
+  .wrapper_min_text--position {
+    margin-right: 0;
+  }
+  /* line 29, F:/exsy/scss/_media.scss */
+  .wrapper_min_text--position .yellow-line {
+    right: 0;
+  }
+  /* line 36, F:/exsy/scss/_media.scss */
+  .wrapper_min_text--adress .yellow-line {
+    right: 0;
+  }
+  /* line 41, F:/exsy/scss/_media.scss */
+  .wrapper_min_contact_big--text {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /* line 48, F:/exsy/scss/_media.scss */
+  div.header_slider {
+    display: none;
+  }
+  /* line 52, F:/exsy/scss/_media.scss */
+  .header_nav {
+    position: relative;
+    background-image: url("../img/logo-bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  /* line 59, F:/exsy/scss/_media.scss */
+  .header_nav .header_navigation_link--btn {
+    display: block;
+  }
+  /* line 62, F:/exsy/scss/_media.scss */
+  .header_nav .header_navigation_link--btn .link-figure {
+    width: 100%;
+    height: 2px;
+    background-color: #f9bf3a;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* line 69, F:/exsy/scss/_media.scss */
+  .header_nav .header_navigation_link--btn .link-figure::after {
+    content: '';
+    display: none;
+  }
+  /* line 75, F:/exsy/scss/_media.scss */
+  .header_nav .header_navigation_link--btn .production_link {
+    color: #ffffff;
+    text-shadow: 0px 1px 3.15px black;
+  }
+  /* line 83, F:/exsy/scss/_media.scss */
+  .header_nav .header_navigation_link--callbtn .btn-call {
+    background-color: #e8e8e8;
+    margin-bottom: 20px;
+    border: 1px solid #f9bf3a;
+  }
+  /* line 91, F:/exsy/scss/_media.scss */
+  .wrapper_min_text--position {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  /* line 100, F:/exsy/scss/_media.scss */
+  .header_nav .header_navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* line 105, F:/exsy/scss/_media.scss */
+  .header_nav--logo {
+    padding-bottom: 20px;
+  }
+}
+
+/*# sourceMappingURL=../css/style.map */

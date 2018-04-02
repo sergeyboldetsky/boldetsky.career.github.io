@@ -1,0 +1,110 @@
+@media screen and (max-width: 1399px) {
+    .header_navigation {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .wrapper_min_text {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .wrapper_min_contact {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        
+        &_big {
+            text-align: center;
+
+            &--text {
+                width: 100%;
+            }
+        }
+    }
+
+    .wrapper_min_text--position {
+        margin-right: 0;
+
+        .yellow-line {
+            right: 0;
+        }
+    }
+
+    .wrapper_min_text--adress  {
+
+        .yellow-line {
+            right: 0;
+        } 
+    }
+
+    .wrapper_min_contact_big--text {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    
+    div.header_slider {
+        display: none;
+    }
+
+    .header_nav {
+        position: relative;
+        background-image: url('../img/logo-bg2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        .header_navigation_link--btn {
+            display: block;
+
+            .link-figure {
+                width: 100%;
+                height: 2px;
+                background-color: #f9bf3a;
+                margin-top: 10px;
+                margin-bottom: 10px;
+        
+                &::after {
+                    content: '';
+                    display: none;
+                }
+            }
+
+            .production_link {
+                color: #ffffff;
+                text-shadow: 0px 1px 3.15px rgba(0, 0, 0, 1.8);
+            }
+        }
+
+        .header_navigation_link--callbtn  {
+
+            .btn-call {
+                background-color: darken($color: #f5f5f5, $amount: 5%);
+                margin-bottom: 20px;
+                border: 1px solid #f9bf3a;
+            }
+        }
+    }
+
+    .wrapper_min_text--position {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 499px) { 
+
+    .header_nav  {
+
+        .header_navigation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &--logo {
+            padding-bottom: 20px;
+        }
+    } 
+}
+
